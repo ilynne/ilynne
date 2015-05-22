@@ -1,0 +1,210 @@
+/*
+@body-font: 'Lekton', Helvetica, Arial, sans-serif;
+@header-font: 'Corben', Georgia, Times, serif;
+@body-font: 'Nobile', Helvetica, Arial, sans-serif;
+@header-font: 'Playfair Display', Georgia, serif;
+
+@header-font: 'Raleway', Helvetica, Arial, sans-serif;
+@body-font: 'Goudy Bookletter 1911', Georgia, Times, serif;
+*/
+.body-font {
+  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-size: .9rem;
+  line-height: 1.3rem;
+}
+.alt-header-font {
+  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-weight: bold;
+}
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.cf:after {
+  clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+/* resets and overrides
+---------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 100%;
+}
+img {
+  border: none;
+}
+/* links & type
+---------- */
+body,
+th,
+td {
+  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-size: .9rem;
+  line-height: 1.3rem;
+}
+th {
+  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-weight: bold;
+}
+a:link,
+a:active,
+a:visited {
+  color: #1410e4;
+}
+a:hover {
+  color: #3a36f1;
+  text-shadow: #e0e410;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Molengo', Georgia, Times, serif;
+  font-weight: normal;
+}
+/* layout
+---------- */
+header {
+  background: #1410e4;
+  color: #e0e410;
+  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+}
+footer {
+  display: block;
+  clear: both;
+  padding: 0 1rem;
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+  zoom: 1;
+}
+header nav ul :after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+header nav ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+header nav ul li a:link,
+header nav ul li a:active,
+header nav ul li a:visited,
+header nav ul li a:hover {
+  color: #e0e410;
+  padding: 0.5rem;
+  display: inline;
+  border-bottom: 4px solid #9795f8;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Molengo', Georgia, Times, serif;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+  border-bottom: 4px solid #e0e410;
+}
+header nav ul li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -3px;
+  top: 19px;
+  height: 6px;
+  width: 6px;
+  background: #ffffff;
+  opacity: .5;
+}
+header nav ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #333333;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -ms-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+.main-content,
+.aux-content {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.main-content {
+  padding: 1rem;
+  flex-direction: row;
+  margin: auto;
+}
+.main-content section {
+  min-width: 75%;
+}
+.aux-content {
+  float: left;
+  width: 25%;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.well {
+  background: #f5f5fe;
+  border-radius: 6px;
+  padding: 1rem;
+}
+.well h1,
+.well h2,
+.well h3,
+.well h4,
+.well h5,
+.well h6 {
+  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.inline-list {
+  list-style-type: none;
+}
+.inline-list li {
+  display: inline;
+}

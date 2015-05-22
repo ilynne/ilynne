@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Lekton" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Molengo" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Muli:bold" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
+  <link href="styles/ilynne.less" rel="stylesheet/less" type="text/css">
+  <link href="styles/menu.css" rel="stylesheet" type="text/css">
+  <script>
+    less = {
+      env: "development",
+      async: false,
+      fileAsync: false,
+      poll: 1000,
+      functions: {},
+      dumpLineNumbers: "comments",
+      relativeUrls: false,
+      rootpath: ":/a.com/"
+    };
+  </script>
+  <script src="javascripts/less.js/dist/less.js" type="text/javascript"></script>
+</head>
+<body>
+<div id='cssmenu'>
+  <ul>
+    <li class='active'><a href='#'><span>Home</span></a></li>
+    <li><a href='#'><span>Products</span></a></li>
+    <li><a href='#'><span>Company</span></a></li>
+    <li class='last'><a href='#'><span>Contact</span></a></li>
+  </ul>
+</div>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" class="active"><i class="fa fa-eye"></i>Lynne.com</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="main-content cf">
+    <section>
+      <h1>First Heading</h1>
+      <p>Paragraph.</p>
+      <p>Paragraph.</p>
+      <p>Paragraph.</p>
+      <p>Paragraph.</p>
+      <p>Paragraph.</p>
+      <p>Paragraph.</p>
+      <p>Paragraph.</p>
+      <table>
+        <tr>
+          <th><h1>header</h1></th>
+          <th>header</th>
+        </tr>
+        <tr>
+          <td>cell</td>
+          <td>cell</td>
+        </tr>
+      </table>
+    </section>
+
+    <div class="aux-content cf">
+      <aside class="well">
+        <h3>First Heading</h3>
+        <p>Paragraph.</p>
+      </aside>
+    </div>
+  </div>
+  <footer>
+    <nav>
+      <ul class="inline-list">
+        <li>
+          <a href="http://facebook.com"><span class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span></a>
+        </li>
+        <li>
+          <a href="http://github.com/ilynne"><span class="fa-stack fa-2x">
+              <i class="fa fa-github fa-stack-2x"></i>
+            </span></a>
+        </li>
+        <li>
+          <a href="http://linkedin.com/in/lynnety"><span class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+            </span></a>
+        </li>
+      </ul>
+    </nav>
+    <p class="copyright">&copy;<time datetime="<%= DateTime.now.strftime('%Y') %>"><%= DateTime.now.strftime('%Y') %></time> Lynne Cooney. Last updated <time datetime="<%= DateTime.now.strftime('%F') %>"><%= DateTime.now.strftime('%-d %B %Y') %></time>.</p>
+  </footer>
+</body>
+</html>
