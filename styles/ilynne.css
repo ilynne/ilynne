@@ -192,15 +192,21 @@ footer {
   bottom: 0;
   width: 95%;
 }
-.main-content {
+.main-container {
   padding: 1rem;
-  flex-direction: row;
-  max-width: 55rem;
   margin: auto;
+  border: 1px solid red;
+  max-width: 55rem;
+  padding-bottom: 0;
 }
-.main-content section {
+.main-content {
+  float: left;
   width: 75%;
-  margin-right: 1rem;
+  padding-right: 1rem;
+}
+.aux-content {
+  float: left;
+  width: 25%;
 }
 .main-content,
 .aux-content {
@@ -214,13 +220,21 @@ footer {
   /* NEW - Chrome */
   display: flex;
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
-}
-.aux-content {
-  float: left;
-  width: 25%;
   flex-direction: column;
   -ms-flex-direction: column;
   -webkit-flex-direction: column;
+  margin-bottom: 1rem;
+  border: 1px solid black;
+}
+@media only screen and (max-width: 479px) {
+  .main-content,
+  .aux-content {
+    float: none;
+    width: 100%;
+    min-width: 100%;
+    display: block;
+    padding: 0;
+  }
 }
 /* callout boxes
 ---------- */

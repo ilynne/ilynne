@@ -71,16 +71,21 @@ footer {
   //border: 1px solid black;
   width: 95%;
 }
-.main-content {
+.main-container {
   padding: @padding-default;
-  flex-direction: row;
-  max-width: 55rem;
   margin: auto;
-  section {
-    width: 75%;
-
-    margin-right: @margin-default;
-  }
+  border: 1px solid red;
+  max-width: 55rem;
+  padding-bottom: 0;
+}
+.main-content {
+  float: left;
+  width: 75%;
+  padding-right: @padding-default;
+}
+.aux-content {
+  float: left;
+  width: 25%;
 }
 .main-content, .aux-content {
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -88,19 +93,22 @@ footer {
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  margin-bottom: @margin-default;
   > :first-child {
     //border: 1px solid red;
     //padding-top: @padding-default;
   }
-  // border: 1px solid black;
-}
-.aux-content {
-  float: left;
-  width: 25%;
-  //background: @shade1;
-  flex-direction: column;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
+  border: 1px solid black;
+  @media @smartphones {
+    float: none;
+    width: 100%;
+    min-width: 100%;
+    display: block;
+    padding: 0;
+  }
 }
 
 /* callout boxes
