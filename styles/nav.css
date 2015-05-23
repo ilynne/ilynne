@@ -39,7 +39,6 @@ header nav ul li a:visited {
   text-decoration: none;
   display: block;
   padding: 15px 25px !important;
-  height: 15px !important;
   font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
   position: relative;
   -webkit-transition: color .25s;
