@@ -53,7 +53,7 @@ ul, ol {
 /* layout
 ---------- */
 header {
-  background: @shade5;
+  background: @shade2;
   color: @complementary2;
   font-family: @body-font;
 }
@@ -88,6 +88,16 @@ footer {
   float: left;
   width: 75%;
   padding-right: @padding-default;
+  section {
+    .default-well;
+    margin-top: @margin-default;
+    @media @smartphones {
+      margin-top: @margin-default-smartphones;
+    }
+  }
+  section:first-child {
+    margin-top: 0;
+  }
 }
 .aux-content {
   float: left;
@@ -110,21 +120,14 @@ footer {
     min-width: 100%;
     display: block;
     padding: 0;
-    margin-bottom: @margin-default * .5;
+    margin-bottom: @margin-default-smartphones;
   }
 }
 
 /* callout boxes
 ---------- */
 .well {
-  background: @backgroundColorHighContrast;
-  //border: 1px solid @complementary2;
-  //box-shadow: 0px 0px 6px @shade2;
-  border-radius: @border-radius;
-  padding: @padding-default;
-  @media @smartphones {
-    border-radius: 0;
-  }
+  .default-well;
 }
 
 /* form elements
