@@ -66,13 +66,13 @@ footer {
   clear: both;
   padding: 0 @padding-default * .5;
   font-size: smaller;
-  position:absolute;
-  bottom:0;
+  //position:absolute;
+  //bottom:0;
   //border: 1px solid black;
-  width: 95%;
-  @media @smartphones {
-    position: relative;
-  }
+  //width: 95%;
+  //@media @smartphones {
+  //  position: relative;
+  //}
 }
 .main-container {
   padding: @padding-default;
@@ -80,6 +80,9 @@ footer {
   // border: 1px solid red;
   max-width: 55rem;
   padding-bottom: 0;
+  @media @smartphones {
+    padding: 0;
+  }
 }
 .main-content {
   float: left;
@@ -100,17 +103,14 @@ footer {
   -ms-flex-direction: column;
   -webkit-flex-direction: column;
   margin-bottom: @margin-default;
-  > :first-child {
-    //border: 1px solid red;
-    //padding-top: @padding-default;
-  }
-  border: 1px solid black;
+  //border: 1px solid black;
   @media @smartphones {
     float: none;
     width: 100%;
     min-width: 100%;
     display: block;
     padding: 0;
+    margin-bottom: @margin-default * .5;
   }
 }
 
@@ -122,8 +122,8 @@ footer {
   //box-shadow: 0px 0px 6px @shade2;
   border-radius: @border-radius;
   padding: @padding-default;
-  h1, h2, h3, h4, h5, h6 {
-    //.alt-header-font
+  @media @smartphones {
+    border-radius: 0;
   }
 }
 

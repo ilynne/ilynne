@@ -215,20 +215,17 @@ footer {
   clear: both;
   padding: 0 0.5rem;
   font-size: smaller;
-  position: absolute;
-  bottom: 0;
-  width: 95%;
-}
-@media only screen and (max-width: 479px) {
-  footer {
-    position: relative;
-  }
 }
 .main-container {
   padding: 1rem;
   margin: auto;
   max-width: 55rem;
   padding-bottom: 0;
+}
+@media only screen and (max-width: 479px) {
+  .main-container {
+    padding: 0;
+  }
 }
 .main-content {
   float: left;
@@ -255,7 +252,6 @@ footer {
   -ms-flex-direction: column;
   -webkit-flex-direction: column;
   margin-bottom: 1rem;
-  border: 1px solid black;
 }
 @media only screen and (max-width: 479px) {
   .main-content,
@@ -265,6 +261,7 @@ footer {
     min-width: 100%;
     display: block;
     padding: 0;
+    margin-bottom: 0.5rem;
   }
 }
 /* callout boxes
@@ -273,6 +270,11 @@ footer {
   background: #ffffff;
   border-radius: 6px;
   padding: 1rem;
+}
+@media only screen and (max-width: 479px) {
+  .well {
+    border-radius: 0;
+  }
 }
 /* form elements
 ---------- */
