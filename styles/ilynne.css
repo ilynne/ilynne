@@ -64,7 +64,7 @@ header nav ul li a:visited {
   color: white;
   text-decoration: none;
   display: block;
-  padding: 15px 25px !important;
+  padding: 15px 25px;
   font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
   position: relative;
   -webkit-transition: color .25s;
@@ -119,6 +119,33 @@ header nav ul:after {
   height: 0;
   clear: both;
   visibility: hidden;
+}
+@media only screen and (max-width: 479px) {
+  header nav ul li {
+    float: none;
+    display: block;
+  }
+  header nav ul li a,
+  header nav ul li a:link,
+  header nav ul li a:visited,
+  header nav ul li a:active {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #9795f8;
+    padding: 0.5rem 1rem;
+  }
+  header nav ul li.last > a,
+  header nav ul li:last-child > a {
+    border: 0;
+  }
+  header nav ul li a:after {
+    display: none;
+  }
+  header nav ul li a:before {
+    display: none;
+  }
 }
 /* resets and overrides
 ---------- */
@@ -192,10 +219,14 @@ footer {
   bottom: 0;
   width: 95%;
 }
+@media only screen and (max-width: 479px) {
+  footer {
+    position: relative;
+  }
+}
 .main-container {
   padding: 1rem;
   margin: auto;
-  border: 1px solid red;
   max-width: 55rem;
   padding-bottom: 0;
 }

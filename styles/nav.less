@@ -18,7 +18,7 @@ header nav {
         color: white;
         text-decoration: none;
         display: block;
-        padding: 15px 25px !important;
+        padding: 15px 25px;
         //height: 15px !important;
         font-family: @header-font;
         //border: 1px solid red;
@@ -78,5 +78,30 @@ header nav {
     height: 0;
     clear: both;
     visibility: hidden;
+  }
+}
+@media @smartphones {
+  header nav ul {
+    li {
+      float: none;
+      display: block;
+      a, a:link, a:visited, a:active {
+        width: 100%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom: 1px solid @shade2;
+        padding: @padding-default * .5 @padding-default;
+      }
+    }
+    li.last > a, li:last-child > a {
+      border: 0;
+    }
+    li a:after {
+      display: none;
+    }
+    li a:before {
+      display: none;
+    }
   }
 }
