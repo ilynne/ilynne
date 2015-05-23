@@ -1,18 +1,17 @@
 /*
+@header-font: 'Molengo', Georgia, Times, serif;
+@body-font: 'Muli', Verdana, Helvetica, sans-serif;
 @body-font: 'Lekton', Helvetica, Arial, sans-serif;
 @header-font: 'Corben', Georgia, Times, serif;
 @body-font: 'Nobile', Helvetica, Arial, sans-serif;
 @header-font: 'Playfair Display', Georgia, serif;
-
-@header-font: 'Raleway', Helvetica, Arial, sans-serif;
-@body-font: 'Goudy Bookletter 1911', Georgia, Times, serif;
 */
 .body-font {
-  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-family: 'Vollkorn', Georgia, Times, serif;
   font-size: .9rem;
   line-height: 1.3rem;
 }
 .alt-header-font {
-  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-family: 'Vollkorn', Georgia, Times, serif;
   font-weight: bold;
 }

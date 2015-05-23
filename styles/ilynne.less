@@ -13,7 +13,13 @@
 html {
   font-size: 100%;
 }
+body {
+  background: @backgroundColor;
+}
 img { border: none; }
+table {
+  background: @backgroundColorHighContrast;
+}
 
 /* links & type
 ---------- */
@@ -37,6 +43,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+ul, ol {
+  padding: @box-padding-default;
+}
+
 /* layout
 ---------- */
 header {
@@ -51,9 +61,24 @@ section {
 footer {
   display: block;
   clear: both;
-  padding: @box-padding-default;
+  padding: 0 @padding-default * .5;
+  font-size: smaller;
+  position:absolute;
+  bottom:0;
+  //border: 1px solid black;
+  width: 95%;
 }
+.main-content {
+  padding: @padding-default;
+  flex-direction: row;
+  max-width: 55rem;
+  margin: auto;
+  section {
+    width: 75%;
 
+    margin-right: @margin-default;
+  }
+}
 .main-content, .aux-content {
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -66,14 +91,6 @@ footer {
   }
   // border: 1px solid black;
 }
-.main-content {
-  padding: @padding-default;
-  flex-direction: row;
-  margin: auto;
-  section {
-    min-width: 75%;
-  }
-}
 .aux-content {
   float: left;
   width: 25%;
@@ -82,20 +99,35 @@ footer {
   -ms-flex-direction: column;
   -webkit-flex-direction: column;
 }
+
+/* callout boxes
+---------- */
 .well {
-  background: @shade1;
+  background: @backgroundColorHighContrast;
   //border: 1px solid @complementary2;
   //box-shadow: 0px 0px 6px @shade2;
   border-radius: @border-radius;
   padding: @padding-default;
   h1, h2, h3, h4, h5, h6 {
-    .alt-header-font
+    //.alt-header-font
   }
 }
-.inline-list {
-  list-style-type: none;
+
+/* form elements
+---------- */
+
+/* misc
+---------- */
+.backgroundHc {
+  background: @backgroundColorHighContrast;
 }
-.inline-list li {
-  display: inline;
+.backgroundShade1 {
+  background: @shade1;
+}
+.centered {
+  text-align: center;
 }
 
+.right-aligned {
+  text-align: right;
+}

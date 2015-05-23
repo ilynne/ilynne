@@ -1,19 +1,18 @@
 /*
+@header-font: 'Molengo', Georgia, Times, serif;
+@body-font: 'Muli', Verdana, Helvetica, sans-serif;
 @body-font: 'Lekton', Helvetica, Arial, sans-serif;
 @header-font: 'Corben', Georgia, Times, serif;
 @body-font: 'Nobile', Helvetica, Arial, sans-serif;
 @header-font: 'Playfair Display', Georgia, serif;
-
-@header-font: 'Raleway', Helvetica, Arial, sans-serif;
-@body-font: 'Goudy Bookletter 1911', Georgia, Times, serif;
 */
 .body-font {
-  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-family: 'Vollkorn', Georgia, Times, serif;
   font-size: .9rem;
   line-height: 1.3rem;
 }
 .alt-header-font {
-  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-family: 'Vollkorn', Georgia, Times, serif;
   font-weight: bold;
 }
 /**
@@ -44,7 +43,7 @@
 }
 header nav {
   width: auto;
-  background: #9795f8;
+  background: #6866f4;
 }
 header nav ul {
   list-style: none;
@@ -65,11 +64,9 @@ header nav ul li a:visited {
   color: white;
   text-decoration: none;
   display: block;
-  padding: 15px 25px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 14px;
+  padding: 15px 25px !important;
+  height: 15px !important;
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
   position: relative;
   -webkit-transition: color .25s;
   -moz-transition: color .25s;
@@ -78,7 +75,7 @@ header nav ul li a:visited {
   transition: color .25s;
 }
 header nav ul li a:hover {
-  color: #100db4;
+  color: black;
 }
 header nav ul li a:hover:before {
   width: 100%;
@@ -102,7 +99,7 @@ header nav ul li a:before {
   bottom: 0;
   height: 3px;
   width: 0;
-  background: #100db4;
+  background: black;
   -webkit-transition: width .25s;
   -moz-transition: width .25s;
   -ms-transition: width .25s;
@@ -114,7 +111,7 @@ header nav ul li:last-child > a:after {
   display: none;
 }
 header nav ul li.active a {
-  color: #100db4;
+  color: black;
 }
 header nav ul:after {
   content: " ";
@@ -133,20 +130,26 @@ header nav ul:after {
 html {
   font-size: 100%;
 }
+body {
+  background: #e7e7e7;
+}
 img {
   border: none;
+}
+table {
+  background: #ffffff;
 }
 /* links & type
 ---------- */
 body,
 th,
 td {
-  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-family: 'Vollkorn', Georgia, Times, serif;
   font-size: .9rem;
   line-height: 1.3rem;
 }
 th {
-  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-family: 'Vollkorn', Georgia, Times, serif;
   font-weight: bold;
 }
 a:link,
@@ -164,20 +167,38 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Molengo', Georgia, Times, serif;
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
   font-weight: normal;
+}
+ul,
+ol {
+  padding: 0 1rem;
 }
 /* layout
 ---------- */
 header {
   background: #1410e4;
   color: #e0e410;
-  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-family: 'Vollkorn', Georgia, Times, serif;
 }
 footer {
   display: block;
   clear: both;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
+  font-size: smaller;
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+}
+.main-content {
+  padding: 1rem;
+  flex-direction: row;
+  max-width: 55rem;
+  margin: auto;
+}
+.main-content section {
+  width: 75%;
+  margin-right: 1rem;
 }
 .main-content,
 .aux-content {
@@ -192,14 +213,6 @@ footer {
   display: flex;
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
-.main-content {
-  padding: 1rem;
-  flex-direction: row;
-  margin: auto;
-}
-.main-content section {
-  min-width: 75%;
-}
 .aux-content {
   float: left;
   width: 25%;
@@ -207,23 +220,26 @@ footer {
   -ms-flex-direction: column;
   -webkit-flex-direction: column;
 }
+/* callout boxes
+---------- */
 .well {
-  background: #f5f5fe;
+  background: #ffffff;
   border-radius: 6px;
   padding: 1rem;
 }
-.well h1,
-.well h2,
-.well h3,
-.well h4,
-.well h5,
-.well h6 {
-  font-family: 'Muli', Verdana, Helvetica, sans-serif;
-  font-weight: bold;
+/* form elements
+---------- */
+/* misc
+---------- */
+.backgroundHc {
+  background: #ffffff;
 }
-.inline-list {
-  list-style-type: none;
+.backgroundShade1 {
+  background: #f5f5fe;
 }
-.inline-list li {
-  display: inline;
+.centered {
+  text-align: center;
+}
+.right-aligned {
+  text-align: right;
 }

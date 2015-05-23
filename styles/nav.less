@@ -2,7 +2,7 @@
 @import "defaults";
 header nav {
   width: auto;
-  background: @shade2;
+  background: @shade3;
   ul {
     list-style: none;
     margin: 0;
@@ -18,11 +18,10 @@ header nav {
         color: white;
         text-decoration: none;
         display: block;
-        padding: 15px 25px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 14px;
+        padding: 15px 25px !important;
+        height: 15px !important;
+        font-family: @header-font;
+        //border: 1px solid red;
         position: relative;
         -webkit-transition: color .25s;
         -moz-transition: color .25s;
@@ -31,7 +30,7 @@ header nav {
         transition: color .25s;
       }
       a:hover {
-        color: @shade6;
+        color: black;
       }
       a:hover:before {
         width: 100%;
@@ -55,7 +54,7 @@ header nav {
         bottom: 0;
         height: 3px;
         width: 0;
-        background: @shade6;
+        background: black;
         -webkit-transition: width .25s;
         -moz-transition: width .25s;
         -ms-transition: width .25s;
@@ -68,7 +67,7 @@ header nav {
     }
     li.active {
       a {
-        color: @shade6;
+        color: black;
       }
     }
   }
